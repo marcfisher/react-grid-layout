@@ -317,6 +317,8 @@ var ReactGridLayout = function (_React$Component) {
 
 
   ReactGridLayout.prototype.processGridItem = function processGridItem(child) {
+    console.log('processGridItem', child, this.state.layout, this.props);
+
     if (!child.key) return;
     var l = (0, _utils.getLayoutItem)(this.state.layout, child.key);
     if (!l) return null;
