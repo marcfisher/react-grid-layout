@@ -339,6 +339,7 @@ var ReactGridLayout = function (_React$Component) {
     var draggable = Boolean(!l.static && isDraggable && (l.isDraggable || l.isDraggable == null));
     var resizable = Boolean(!l.static && isResizable && (l.isResizable || l.isResizable == null));
 
+    console.log('processGridItem', l);
     return _react2.default.createElement(
       _GridItem2.default,
       {

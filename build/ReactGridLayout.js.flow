@@ -395,6 +395,7 @@ export default class ReactGridLayout extends React.Component {
     const draggable = Boolean(!l.static && isDraggable && (l.isDraggable || l.isDraggable == null));
     const resizable = Boolean(!l.static && isResizable && (l.isResizable || l.isResizable == null));
 
+    console.log('processGridItem', l);
     return (
       <GridItem
         containerWidth={width}

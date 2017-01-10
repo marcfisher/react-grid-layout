@@ -196,6 +196,7 @@ function correctBounds(layout, bounds) {
  * @return {LayoutItem}    Item at ID.
  */
 function getLayoutItem(layout, id) {
+  console.log('getLayoutItem', layout);
   for (var _i5 = 0, len = layout.length; _i5 < len; _i5++) {
     if (layout[_i5].i === id) return layout[_i5];
   }
