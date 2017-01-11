@@ -383,8 +383,6 @@ export default class ReactGridLayout extends React.Component {
    * @return {Element}       Element wrapped in draggable and properly placed.
    */
   processGridItem(child: React.Element<any>): ?React.Element<any> {
-    console.log('processGridItem', child, this.state.layout, this.props);
-
     if (!child.key) return;
     const l = getLayoutItem(this.state.layout, child.key);
     if (!l) return null;
@@ -397,7 +395,6 @@ export default class ReactGridLayout extends React.Component {
     const draggable = Boolean(!l.static && isDraggable && (l.isDraggable || l.isDraggable == null));
     const resizable = Boolean(!l.static && isResizable && (l.isResizable || l.isResizable == null));
 
-    console.log('processGridItem', l);
     return (
       <GridItem
         containerWidth={width}

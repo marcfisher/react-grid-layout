@@ -69,7 +69,8 @@ function cloneLayoutItem(layoutItem) {
     minW: layoutItem.minW, maxW: layoutItem.maxW, minH: layoutItem.minH, maxH: layoutItem.maxH,
     moved: Boolean(layoutItem.moved), static: Boolean(layoutItem.static),
     // These can be null
-    isDraggable: layoutItem.isDraggable, isResizable: layoutItem.isResizable
+    isDraggable: layoutItem.isDraggable, isResizable: layoutItem.isResizable,
+    handle: layoutItem.handle
   };
 }
 
@@ -196,7 +197,6 @@ function correctBounds(layout, bounds) {
  * @return {LayoutItem}    Item at ID.
  */
 function getLayoutItem(layout, id) {
-  console.log('getLayoutItem', layout);
   for (var _i5 = 0, len = layout.length; _i5 < len; _i5++) {
     if (layout[_i5].i === id) return layout[_i5];
   }

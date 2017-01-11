@@ -51,7 +51,8 @@ export function cloneLayoutItem(layoutItem: LayoutItem): LayoutItem {
     minW: layoutItem.minW, maxW: layoutItem.maxW, minH: layoutItem.minH, maxH: layoutItem.maxH,
     moved: Boolean(layoutItem.moved), static: Boolean(layoutItem.static),
     // These can be null
-    isDraggable: layoutItem.isDraggable, isResizable: layoutItem.isResizable
+    isDraggable: layoutItem.isDraggable, isResizable: layoutItem.isResizable,
+    handle: layoutItem.handle
   };
 }
 
@@ -175,7 +176,6 @@ export function correctBounds(layout: Layout, bounds: {cols: number}): Layout {
  * @return {LayoutItem}    Item at ID.
  */
 export function getLayoutItem(layout: Layout, id: string): ?LayoutItem {
-  console.log('getLayoutItem', layout);
   for (let i = 0, len = layout.length; i < len; i++) {
     if (layout[i].i === id) return layout[i];
   }
